@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>공정·설비 | 삼금공업(주)</title>
+  <style>
+    :root{
+      --bg:#0b1220; --text:#e8eefc; --muted:#b8c4e6;
+      --brand:#4ea2ff; --brand2:#7b5cff;
+      --line:rgba(255,255,255,.10); --radius:18px; --max:1120px;
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(78,162,255,.35), transparent 60%),
+        radial-gradient(1200px 700px at 90% 10%, rgba(123,92,255,.28), transparent 55%),
+        linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px;}
+    .brand{display:flex; align-items:center; gap:10px;}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(78,162,255,.95), rgba(123,92,255,.95));
+      position:relative; box-shadow: 0 10px 24px rgba(78,162,255,.18);
+    }
+    .logo:after{content:"S"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:800;}
+    .brand h1{margin:0; font-size:14px; font-weight:800;}
+    .brand p{margin:0; font-size:12px; color:var(--muted);}
+
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:10px 12px; border-radius:12px; border:1px solid transparent;
+      color:var(--muted); font-weight:800; font-size:13px; transition:.18s ease;
+    }
+    nav a:hover{border-color:var(--line); color:var(--text); background: rgba(255,255,255,.04);}
+    nav a.active{color:var(--text); border-color: rgba(78,162,255,.35); background: rgba(78,162,255,.10);}
+
+    .page{padding:36px 0 24px;}
+    .head{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,27,51,.78), rgba(11,23,48,.70));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .head h2{margin:0 0 8px; font-size:28px; letter-spacing:-.4px;}
+    .head p{margin:0; color:var(--muted); font-size:14px;}
+
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px;}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr;} }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      padding:18px;
+    }
+    .card h3{margin:0 0 10px; font-size:16px;}
+    .card p, .card li{color:var(--muted); font-size:13px;}
+
+    .flow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:10px;
+    }
+    .step{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:900;
+      font-size:12px;
+      color:var(--text);
+    }
+    .arrow{opacity:.7; padding:10px 0; font-weight:900;}
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-size:13px;
+    }
+    th,td{padding:10px 10px; border-bottom:1px solid var(--line); color:var(--muted); text-align:left;}
+    th{color:var(--text); background: rgba(255,255,255,.04); font-weight:900;}
+    tr:last-child td{border-bottom:none}
+
+    footer{margin-top:28px; padding:22px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:12px;}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>삼금공업(주)</h1>
+            <p>Process & Equipment</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">홈</a>
+          <a href="about.html">회사소개</a>
+          <a href="products.html">제품</a>
+          <a class="active" href="process.html">공정·설비</a>
+          <a href="contact.html">문의</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="container">
+
+      <section class="head">
+        <h2>공정·설비</h2>
+        <p>공정흐름도 · 주요 설비 · 검사/측정 장비</p>
+      </section>
+
+      <section class="grid">
+
+        <article class="card">
+          <h3>공정 흐름 (요약)</h3>
+          <p>원소재 입고부터 출하까지 핵심 흐름을 한 줄로 정리했습니다.</p>
+          <div class="flow" aria-label="공정 흐름">
+            <span class="step">원소재 입고</span><span class="arrow">→</span>
+            <span class="step">절단/가공</span><span class="arrow">→</span>
+            <span class="step">세척</span><span class="arrow">→</span>
+            <span class="step">성형/조립</span><span class="arrow">→</span>
+            <span class="step">BRAZING</span><span class="arrow">→</span>
+            <span class="step">BENDING</span><span class="arrow">→</span>
+            <span class="step">Leak 검사</span><span class="arrow">→</span>
+            <span class="step">최종 검사</span><span class="arrow">→</span>
+            <span class="step">출하</span>
+          </div>
+          <p style="margin:10px 0 0; color:var(--muted); font-size:12px;">
+            * 실제 자료의 흐름도를 웹용으로 요약한 내용입니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>중요설비: BRAZING로</h3>
+          <p>
+            동(Cu) 용융에 의한 모세관 침투 방식으로 조립 틈새를 채우는 용접 방식이며,
+            일정 강도 유지와 변형/손상 최소화에 강점이 있습니다.
+          </p>
+          <p style="margin:10px 0 0; color:var(--muted); font-size:12px;">
+            * 현대자동차 용접 SQ 인증 관련 설명 자료 기반 요약.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>주요 가공 설비 (예시)</h3>
+          <table aria-label="주요 가공 설비 표">
+            <thead>
+              <tr><th>구분</th><th>설비</th><th>비고</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>절삭</td><td>CNC 선반</td><td>현대위아 외</td></tr>
+              <tr><td>복합</td><td>복합기</td><td>한화기계</td></tr>
+              <tr><td>성형</td><td>유압 성형기</td><td>주문제작</td></tr>
+              <tr><td>세척</td><td>세척기</td><td>특허등록 설비</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="card">
+          <h3>조립/후공정 설비 (예시)</h3>
+          <table aria-label="조립/후공정 설비 표">
+            <thead>
+              <tr><th>구분</th><th>설비</th><th>비고</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>조립</td><td>조립기</td><td>자동/수동</td></tr>
+              <tr><td>브레이징</td><td>Fe BRAZING로</td><td>벨트식 연속로</td></tr>
+              <tr><td>브레이징</td><td>SUS BRAZING로</td><td>보유</td></tr>
+              <tr><td>벤딩</td><td>CNC BENDING / POWER BENDING</td><td>AIR/유압</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="card" style="grid-column:1/-1;">
+          <h3>측정/검사 장비 (예시)</h3>
+          <table aria-label="측정/검사 장비 표">
+            <thead>
+              <tr><th>장비</th><th>예시 항목</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>치수/형상</td><td>투영기 · 형상 측정기 · 3차원 측정기</td></tr>
+              <tr><td>재질/표면</td><td>경도기 · 도금두께측정기 · 표면조도측정기</td></tr>
+              <tr><td>검사</td><td>비젼 검사기(Glow Plug 검사) · 한계게이지 등</td></tr>
+            </tbody>
+          </table>
+          <p style="margin:10px 0 0; color:var(--muted); font-size:12px;">
+            * 표는 홈페이지 가독성을 위해 대표 항목 중심으로 구성했습니다.
+          </p>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Samkum Co., Ltd.
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

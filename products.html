@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>제품 | 삼금공업(주)</title>
+  <style>
+    :root{
+      --bg:#0b1220; --text:#e8eefc; --muted:#b8c4e6;
+      --brand:#4ea2ff; --brand2:#7b5cff;
+      --line:rgba(255,255,255,.10); --radius:18px; --max:1120px;
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(78,162,255,.35), transparent 60%),
+        radial-gradient(1200px 700px at 90% 10%, rgba(123,92,255,.28), transparent 55%),
+        linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px;}
+    .brand{display:flex; align-items:center; gap:10px;}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(78,162,255,.95), rgba(123,92,255,.95));
+      position:relative; box-shadow: 0 10px 24px rgba(78,162,255,.18);
+    }
+    .logo:after{content:"S"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:800;}
+    .brand h1{margin:0; font-size:14px; font-weight:800;}
+    .brand p{margin:0; font-size:12px; color:var(--muted);}
+
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:10px 12px; border-radius:12px; border:1px solid transparent;
+      color:var(--muted); font-weight:800; font-size:13px; transition:.18s ease;
+    }
+    nav a:hover{border-color:var(--line); color:var(--text); background: rgba(255,255,255,.04);}
+    nav a.active{color:var(--text); border-color: rgba(78,162,255,.35); background: rgba(78,162,255,.10);}
+
+    .page{padding:36px 0 24px;}
+    .head{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,27,51,.78), rgba(11,23,48,.70));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .head h2{margin:0 0 8px; font-size:28px; letter-spacing:-.4px;}
+    .head p{margin:0; color:var(--muted); font-size:14px;}
+
+    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px;}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr;} }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    .thumb{
+      height:160px;
+      background:
+        linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+        url("images/products.jpg");
+      background-size: cover;
+      background-position: center;
+      border-bottom:1px solid var(--line);
+    }
+    .content{padding:16px 16px 18px;}
+    .title{font-weight:900; margin:0 0 6px;}
+    .desc{margin:0; color:var(--muted); font-size:13px;}
+    .tags{padding:0 16px 16px; display:flex; gap:8px; flex-wrap:wrap;}
+    .tag{
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+    }
+
+    .panel{
+      margin-top:14px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      padding:18px;
+    }
+    .panel h3{margin:0 0 10px; font-size:16px;}
+    .panel li{color:var(--muted); font-size:13px;}
+    footer{margin-top:28px; padding:22px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:12px;}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>삼금공업(주)</h1>
+            <p>Products</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">홈</a>
+          <a href="about.html">회사소개</a>
+          <a class="active" href="products.html">제품</a>
+          <a href="process.html">공정·설비</a>
+          <a href="contact.html">문의</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="container">
+
+      <section class="head">
+        <h2>제품 소개</h2>
+        <p>자동차 HOSE FITTING · 산업용 금구류 · 절삭/성형/조립 제품</p>
+      </section>
+
+      <section class="grid">
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/brake.jpg');"></div>
+          <div class="content">
+            <p class="title">Brake Hose Fitting 금구</p>
+            <p class="desc">Brake hose End부 체결 제품. 단조·Press·절삭가공품 조립 후 BRAZING 및 bending 공정.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">BRAZING</span><span class="tag">BENDING</span><span class="tag">Ass’y</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/power.jpg');"></div>
+          <div class="content">
+            <p class="title">Power Hose Fitting 금구</p>
+            <p class="desc">Power Steering Hose 체결 제품. 단조/절삭품 조립 후 layout에 따른 bending·성형 공정.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Forming</span><span class="tag">Bending</span><span class="tag">Pipe</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/banjo.jpg');"></div>
+          <div class="content">
+            <p class="title">Banjo 금구</p>
+            <p class="desc">Power/Fuel/기타 end부 체결. 단조 후 절삭가공 공정 중심(규격 SΦ14~SΦ42 이상).</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Forging</span><span class="tag">CNC</span><span class="tag">Machining</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/jointtube.jpg');"></div>
+          <div class="content">
+            <p class="title">Joint Tube 류</p>
+            <p class="desc">절단 → End 성형/축관 → 조립 → BRAZING → BENDING 등. 공조/냉각 파트에 적용.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Cutting</span><span class="tag">Brazing</span><span class="tag">Cooling</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/cnc.jpg');"></div>
+          <div class="content">
+            <p class="title">정밀 절삭 가공품</p>
+            <p class="desc">CNC LATHE, 복합기, CAM선반 등 설비 기반의 정밀 가공품 대응.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">CNC</span><span class="tag">Complex</span><span class="tag">CAM</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb" style="background-image:
+            linear-gradient(135deg, rgba(78,162,255,.18), rgba(123,92,255,.12)),
+            url('images/assy.jpg');"></div>
+          <div class="content">
+            <p class="title">PRESS품 활용 조립품</p>
+            <p class="desc">Press 부품 기반 조립 제품군. 고객 요구에 맞춘 조립/가공 공정 대응.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">Press</span><span class="tag">Assembly</span><span class="tag">Quality</span>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="panel">
+        <h3>주요 사업 영역(요약)</h3>
+        <ul>
+          <li>자동차부품: 자동차 HOSE용 FITTING류 (Brake/Fuel/Power Steering/Aircon 등)</li>
+          <li>산업용 금구류: 산업용 HOSE FITTING류</li>
+        </ul>
+        <p style="margin:10px 0 0; color:var(--muted); font-size:12px;">
+          * 제품 사진은 images 폴더에 brake.jpg, power.jpg 등으로 넣으면 자동으로 표시됩니다.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Samkum Co., Ltd.
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

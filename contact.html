@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>문의 | 삼금공업(주)</title>
+  <style>
+    :root{
+      --bg:#0b1220; --text:#e8eefc; --muted:#b8c4e6;
+      --brand:#4ea2ff; --brand2:#7b5cff;
+      --line:rgba(255,255,255,.10); --radius:18px; --max:1120px;
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(78,162,255,.35), transparent 60%),
+        radial-gradient(1200px 700px at 90% 10%, rgba(123,92,255,.28), transparent 55%),
+        linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px;}
+    .brand{display:flex; align-items:center; gap:10px;}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(78,162,255,.95), rgba(123,92,255,.95));
+      position:relative; box-shadow: 0 10px 24px rgba(78,162,255,.18);
+    }
+    .logo:after{content:"S"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:800;}
+    .brand h1{margin:0; font-size:14px; font-weight:800;}
+    .brand p{margin:0; font-size:12px; color:var(--muted);}
+
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:10px 12px; border-radius:12px; border:1px solid transparent;
+      color:var(--muted); font-weight:800; font-size:13px; transition:.18s ease;
+    }
+    nav a:hover{border-color:var(--line); color:var(--text); background: rgba(255,255,255,.04);}
+    nav a.active{color:var(--text); border-color: rgba(78,162,255,.35); background: rgba(78,162,255,.10);}
+
+    .page{padding:36px 0 24px;}
+    .head{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,27,51,.78), rgba(11,23,48,.70));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .head h2{margin:0 0 8px; font-size:28px; letter-spacing:-.4px;}
+    .head p{margin:0; color:var(--muted); font-size:14px;}
+
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px;}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr;} }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      padding:18px;
+    }
+    .card h3{margin:0 0 10px; font-size:16px;}
+    .row{display:flex; gap:10px; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--line);}
+    .row:last-child{border-bottom:none}
+    .k{min-width:92px; color:var(--muted); font-weight:900; font-size:13px;}
+    .v{color:var(--text); font-weight:800; font-size:13px;}
+    .hint{color:var(--muted); font-size:12px; margin-top:10px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px; border:1px solid var(--line);
+      font-weight:900; font-size:13px;
+      background: rgba(255,255,255,.04);
+      margin-right:10px;
+    }
+    .btn:hover{background: rgba(255,255,255,.06)}
+    .mapbox{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background: rgba(255,255,255,.03);
+    }
+    iframe{width:100%; height:320px; border:0;}
+    footer{margin-top:28px; padding:22px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:12px;}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>삼금공업(주)</h1>
+            <p>Contact</p>
+          </div>
+        </a>
+        <nav>
+          <a href="index.html">홈</a>
+          <a href="about.html">회사소개</a>
+          <a href="products.html">제품</a>
+          <a href="process.html">공정·설비</a>
+          <a class="active" href="contact.html">문의</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <div class="container">
+
+      <section class="head">
+        <h2>문의 / 오시는길</h2>
+        <p>견적 요청 · 기술 문의 · 방문 상담</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>연락처</h3>
+
+          <div class="row"><div class="k">회사명</div><div class="v">삼금공업(주)</div></div>
+          <div class="row"><div class="k">이메일</div><div class="v">samkum@samkum.co.kr / koreasamkum@yahoo.co.jp</div></div>
+          <div class="row"><div class="k">주소</div><div class="v">경북 김천시 공단4길 69 (2차 공업단지 1-4B)</div></div>
+          <div class="row"><div class="k">웹사이트</div><div class="v">www.samkum.co.kr</div></div>
+
+          <div class="hint">
+            * 전화번호는 회사 대표번호를 추가로 기입하시면 완성도가 확 올라갑니다.
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="mailto:samkum@samkum.co.kr">이메일 보내기</a>
+            <a class="btn" href="products.html">제품 보기</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>지도(구글맵)</h3>
+          <div class="mapbox">
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=%EA%B2%BD%EB%B6%81%20%EA%B9%80%EC%B2%9C%EC%8B%9C%20%EA%B3%B5%EB%8B%A84%EA%B8%B8%2069&output=embed">
+            </iframe>
+          </div>
+          <div class="hint">
+            * 네이버지도/카카오맵으로 바꾸길 원하시면 말씀만 하세요. 링크 방식으로도 고급스럽게 가능합니다.
+          </div>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top:14px;">
+        <h3>문의 안내(추천 문구)</h3>
+        <p style="color:var(--muted); font-size:13px; margin:0;">
+          “도면/규격/수량/납기” 정보를 함께 주시면 검토 후 빠르게 회신드릴 수 있습니다.<br/>
+          (예: 제품 유형, 재질, 표면처리, 검사 기준 등)
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Samkum Co., Ltd.
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

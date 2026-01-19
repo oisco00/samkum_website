@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>삼금공업(주) | Samkum</title>
+  <meta name="description" content="삼금공업(주) - 자동차 HOSE용 FITTING 및 산업용 금구류 전문 제조기업" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --card2:#0b1730;
+      --text:#e8eefc;
+      --muted:#b8c4e6;
+      --brand:#4ea2ff;
+      --brand2:#7b5cff;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(78,162,255,.35), transparent 60%),
+        radial-gradient(1200px 700px at 90% 10%, rgba(123,92,255,.28), transparent 55%),
+        linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width:220px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(78,162,255,.95), rgba(123,92,255,.95));
+      box-shadow: 0 10px 24px rgba(78,162,255,.18);
+      position:relative;
+    }
+    .logo:after{
+      content:"S";
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:800; letter-spacing:.5px;
+    }
+    .brand h1{
+      margin:0; font-size:14px; font-weight:800;
+      letter-spacing:.2px;
+    }
+    .brand p{
+      margin:0; font-size:12px; color:var(--muted);
+    }
+
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      transition:.18s ease;
+    }
+    nav a:hover{
+      border-color:var(--line);
+      color:var(--text);
+      background: rgba(255,255,255,.04);
+    }
+    nav a.active{
+      color:var(--text);
+      border-color: rgba(78,162,255,.35);
+      background: rgba(78,162,255,.10);
+    }
+
+    .hero{
+      padding:54px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .brand{min-width:auto}
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,27,51,.78), rgba(11,23,48,.70));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-inner{padding:26px}
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      color: var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+    .badge b{color:var(--text)}
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:40px;
+      line-height:1.15;
+      letter-spacing:-.6px;
+    }
+    .hero h2 span{
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .hero p{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size:15px;
+      max-width: 62ch;
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      font-weight:800;
+      font-size:13px;
+      transition:.18s ease;
+      background: rgba(255,255,255,.04);
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.06)}
+    .btn.primary{
+      border-color: rgba(78,162,255,.35);
+      background: linear-gradient(135deg, rgba(78,162,255,.22), rgba(123,92,255,.16));
+    }
+
+    .stat-grid{
+      display:grid; grid-template-columns: repeat(2,1fr);
+      gap:12px;
+    }
+    .stat{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .stat .k{font-size:12px; color:var(--muted); font-weight:800}
+    .stat .v{font-size:22px; font-weight:900; margin-top:4px}
+    .stat .d{font-size:12px; color:var(--muted); margin-top:6px}
+
+    .section{padding:26px 0}
+    .section h3{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 980px){
+      .cards{grid-template-columns:1fr}
+    }
+    .card{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
+    .card .title{font-weight:900; margin-bottom:6px}
+    .card .desc{color:var(--muted); font-size:13px; margin:0}
+    .pill{
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      margin-right:8px;
+      margin-top:10px;
+    }
+
+    footer{
+      margin-top:34px;
+      padding:24px 0 40px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-size:12px;
+    }
+    .footer-grid{
+      display:flex; flex-wrap:wrap; gap:12px;
+      align-items:flex-start; justify-content:space-between;
+    }
+    .tiny{opacity:.9}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html" aria-label="홈으로">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>삼금공업(주) <span style="opacity:.65">| Samkum</span></h1>
+            <p>Automotive Fitting · Industrial Hose Fitting</p>
+          </div>
+        </a>
+
+        <nav aria-label="주요 메뉴">
+          <a class="active" href="index.html">홈</a>
+          <a href="about.html">회사소개</a>
+          <a href="products.html">제품</a>
+          <a href="process.html">공정·설비</a>
+          <a href="contact.html">문의</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="panel">
+            <div class="panel-inner">
+              <div class="badge">
+                <span>Since</span> <b>1984</b> · <span>자동차 부품 전문 생산기업</span>
+              </div>
+              <h2>
+                좋은 생각, <span>좋은 품질</span><br/>
+                삼금공업(주)
+              </h2>
+              <p>
+                삼금공업은 자동차 HOSE용 FITTING류와 산업용 금구류를 생산하는 제조기업입니다.
+                단조·절삭·성형·BENDING·BRAZING·조립 등 공정 역량을 기반으로 고객 요구에 맞춘 품질을 제공합니다.
+              </p>
+              <div class="cta">
+                <a class="btn primary" href="products.html">제품 보기 →</a>
+                <a class="btn" href="process.html">공정·설비 →</a>
+                <a class="btn" href="contact.html">견적·문의 →</a>
+              </div>
+
+              <div style="margin-top:18px">
+                <span class="pill">Fitting / Joint / Tube</span>
+                <span class="pill">CNC · BRAZING</span>
+                <span class="pill">품질 시스템</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-inner">
+              <h3 style="margin:0 0 12px; font-size:16px;">핵심 지표 (자료 기반)</h3>
+              <div class="stat-grid">
+                <div class="stat">
+                  <div class="k">인원 (2025.08 기준)</div>
+                  <div class="v">53명</div>
+                  <div class="d">임원 1 · 관리직 10 · 기능직 42</div>
+                </div>
+                <div class="stat">
+                  <div class="k">매출 (2024.12 기준)</div>
+                  <div class="v">11,361</div>
+                  <div class="d">단위: 백만 (수출 67% / 내수 33%)</div>
+                </div>
+                <div class="stat">
+                  <div class="k">생산량 (2024.12 기준)</div>
+                  <div class="v">28,500,000</div>
+                  <div class="d">EA / 주요 제품군 생산</div>
+                </div>
+                <div class="stat">
+                  <div class="k">2025 목표 (요약)</div>
+                  <div class="v">매출 18.4%</div>
+                  <div class="d">수출 9,509 · 내수 3,950 (단위: 백만)</div>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; color:var(--muted); font-size:12px;">
+                * 위 수치는 회사소개서 표기 기준 요약입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>삼금공업이 제공하는 가치</h3>
+          <div class="cards">
+            <div class="card">
+              <div class="title">자동차 호스용 FITTING 전문</div>
+              <p class="desc">Brake/Fuel/Power Steering/Aircon 등 HOSE용 FITTING류 제작 역량.</p>
+            </div>
+            <div class="card">
+              <div class="title">BRAZING 기반 조립·성형 공정</div>
+              <p class="desc">조립 후 BRAZING, BENDING 등 공정을 통한 품질 안정화 및 대량생산 대응.</p>
+            </div>
+            <div class="card">
+              <div class="title">수출 중심 글로벌 대응</div>
+              <p class="desc">일본 등 해외 고객 대응 경험 기반의 납기·품질 체계 운영.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="panel">
+            <div class="panel-inner">
+              <h3 style="margin-top:0">빠른 안내</h3>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div class="card" style="margin:0">
+                  <div class="title">사업 영역</div>
+                  <p class="desc">자동차부품: HOSE용 FITTING류 / 산업용 금구류: 산업용 HOSE FITTING류</p>
+                </div>
+                <div class="card" style="margin:0">
+                  <div class="title">사업장</div>
+                  <p class="desc">경북 김천시 공단4길 69 (2차 공업단지 1-4B)</p>
+                </div>
+              </div>
+              <div class="cta" style="margin-top:14px;">
+                <a class="btn" href="about.html">회사 소개서 요약 →</a>
+                <a class="btn" href="contact.html">연락처 확인 →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="tiny">
+          <div style="font-weight:900; color:var(--text)">삼금공업(주)</div>
+          <div>좋은 생각, 좋은 품질 · 노력(고생)해서 이기자</div>
+        </div>
+        <div class="tiny">
+          <div>© <span id="y"></span> Samkum Co., Ltd. All rights reserved.</div>
+          <div style="margin-top:6px;">이 페이지는 로컬에서 먼저 확인 후 업로드하여 서비스할 수 있습니다.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
